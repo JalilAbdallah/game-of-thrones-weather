@@ -11,23 +11,34 @@
 
 <body>
 
-    <header class="header">
-        <p id="wither-status">Huh?</p>
+    <header>
+        <div class="search-container">
+            <input type="search" class="search-bar" name="search" id="search" placeholder="Search for a City">
+            <i class="ph-bold ph-magnifying-glass"></i>
+        </div>
     </header>
 
     <main class="main">
-        <section class="container">
+        <section class="weather-container">
+            <p id="weather-status">Huh?</p>
+        </section>
+
+        <section class="main-container">
             <p>It's like ...</p>
-            <strong id="final-result">UNKNOWN</strong>
+            <p id="final-result"><strong>UNKNOWN</strong></p>
             <p>Out There</p>
+        </section>
+        
+        <section class="qoute-container">
+            <p id="quote">Loading Up ...</p>
         </section>
     </main>
 
     <footer class="footer">
-        <p id="quote">Loading Up ...</p>
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
 </body>
 
 </html>
