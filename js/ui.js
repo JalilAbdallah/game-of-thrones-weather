@@ -18,7 +18,7 @@ function updateUI(data) {
 
   document.getElementById("weather-status").textContent = weatherStatus;
   document.getElementById("final-result").textContent = region;
-  document.getElementById("quote").innerHTML = `${firstLine}<br>${secondLine}`; // Use innerHTML to add <br> for line break
+  document.getElementById("quote").innerHTML = `${firstLine}<br>${secondLine}`;
 
   document.body.style.backgroundImage = `url(../assets/images/${image})`;
 }
