@@ -1,20 +1,19 @@
 // Function to fetch weather data using city name from WeatherStack
-const accessKey = 'd3036383e5a09ff752cd35b9a43990f3'; // <-- Replace if needed
+const accessKey = '8e33c4e74154e8c8b80c304be91796c4'; // <-- Replace if needed
 async function getWeatherForCity(city) {
-    // Use HTTP for WeatherStack because it doesn't support HTTPS for free accounts
-    const weatherUrl = `http://api.weatherstack.com/current?access_key=${accessKey}&query=${encodeURIComponent(city)}`;
-    console.log("Fetching weather from:", weatherUrl); // Debug log
+    const weatherUrl = `https://api.weatherstack.com/current?access_key=${accessKey}&query=${encodeURIComponent(city)}`;
+    // console.log("Fetching weather from:", weatherUrl); // Debug log
 
     const response = await fetch(weatherUrl);
 
-    if (!response.ok) {
-        // Attempt to provide more context for common errors like mixed content
-         if (window.location.protocol === 'https:' && weatherUrl.startsWith('http://')) {
-             throw new Error(`WeatherStack HTTP Error: ${response.status}. Possible mixed content issue (page is HTTPS, API is HTTP).`);
-         } else {
-             throw new Error(`HTTP error from WeatherStack! Status: ${response.status}`);
-         }
-    }
+    // if (!response.ok) {
+    //     // Attempt to provide more context for common errors like mixed content
+    //      if (window.location.protocol === 'https:' && weatherUrl.startsWith('https://')) {
+    //          throw new Error(`WeatherStack HTTP Error: ${response.status}. Possible mixed content issue (page is HTTPS, API is HTTP).`);
+    //      } else {
+    //          throw new Error(`HTTP error from WeatherStack! Status: ${response.status}`);
+    //      }
+    // }
     
     const data = await response.json();
     console.log("WeatherStack response:", data); // Debug log

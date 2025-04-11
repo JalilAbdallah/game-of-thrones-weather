@@ -118,7 +118,7 @@ header i.ph-magnifying-glass:hover {
 }
 
 #quote {
-  /* margin: 0; */
+  margin-bottom: 40px;
 }
 .footer {
   display: flex;
