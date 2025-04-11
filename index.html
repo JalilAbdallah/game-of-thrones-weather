@@ -11,11 +11,10 @@
 </head>
 
 <body>
-
     <header>
         <div class="search-container">
             <input type="search" class="search-bar" name="search" id="search" placeholder="Search for a City">
-            <i class="ph-bold ph-magnifying-glass" style="color:red"></i>
+            <i class="ph-bold ph-magnifying-glass"></i>
         </div>
     </header>
 
@@ -39,7 +38,22 @@
     <footer class="footer">
     </footer>
 
-    <script src="./js/script.js"></script>
+    <dialog id="error-dialog">
+        <form method="dialog">
+            <h2 id="dialog-title" class="dialog-title">Error</h2>
+            <p id="dialog-message" class="dialog-message"></p>
+            <button id="dialog-close" class="dialog-close" type="submit">Close</button>
+        </form>
+    </dialog>
+
+    <script src="./js/weatherMapping.js" defer></script>
+    <script src="./js/utils.js" defer></script>
+    <script src="./js/ui.js" defer></script>
+    <script src="./js/api.js" defer></script>
+    <script src="./js/location.js" defer></script>
+    <script src="./js/eventListeners.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
 </body>
 
