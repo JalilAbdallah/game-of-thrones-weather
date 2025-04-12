@@ -47,6 +47,23 @@ header i.ph-magnifying-glass {
   padding: 12px 15px;
   border: 1px solid #333;
   border-left: none;
+  border-right: none;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+header i.reset-button {
+  font-size: 16px;
+  color: #ccc;
+  background-color: rgba(20, 20, 20, 0.8);
+  padding: 12px 15px;
+  border: 1px solid #333;
+  border-left: none;
   border-radius: 0 25px 25px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -54,6 +71,12 @@ header i.ph-magnifying-glass {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+}
+
+header i.reset-button:hover {
+  border-color: #555;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  color: #fff;
 }
 
 .search-bar:hover {
@@ -92,6 +115,25 @@ header i.ph-magnifying-glass:hover {
   position: absolute;
   top: 30px;
   left: 180px;
+  width: calc(100% - 360px); 
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-display {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #ccc;
+}
+
+.location-display i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+#location-name {
+  font-size: 16px;
 }
 
 #weather-status {
