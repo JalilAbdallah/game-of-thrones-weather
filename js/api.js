@@ -1,19 +1,19 @@
-async function fetchWeather(city) {
-    const accessKey = "4e59e2fba1cceebba246339c0b6b8a16"; 
-    const url = `http://api.weatherstack.com/current?access_key=${accessKey}&query=${city}`;
+async function fetchWeather(query) {
+    const accessKey = "c3cba97b6ac265d8eeef2c2947697d77"; 
+    const url = `https://api.openweathermap.org/data/2.5/weather?${query}&appid=${accessKey}&units=metric`;
   
     try {
       const response = await fetch(url);
       const data = await response.json();
   
-      if (data.error) {
-        throw new Error(data.error.info || "City not found.");
+      if (data.cod !== 200) {
+        throw new Error("City not found.");
       }
       console.log(data);
       
       updateUI(data);
     } catch (error) {
-      showModal(`Error: ${error.message}`);
+      showModal(error);
 
       document.getElementById("weather-status").textContent = "Huh?";
       document.getElementById("final-result").textContent = "NOTHING";

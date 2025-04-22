@@ -1,6 +1,6 @@
 function updateUI(data) {
-    const temp = data.current.temperature;
-    const weatherDescription = data.current.weather_descriptions[0];
+    const temp = parseInt(data.main.temp);
+    const weatherDescription = data.weather[0].description;
     const rangeKey = getTemperatureRange(temp);
   
     if (!rangeKey) {
@@ -14,15 +14,14 @@ function updateUI(data) {
     const quote = mapping.quote;
     const image = mapping.image;
   
-    const location = data.location;
-    let locationName = location.name || location.region || location.country || "Unknown";
+    const location = data.name || "Unknown";
   
     const { firstLine, secondLine } = splitQuote(quote);
   
     document.getElementById("weather-status").textContent = weatherStatus;
     document.getElementById("final-result").textContent = region;
     document.getElementById("quote").innerHTML = `${firstLine}<br>${secondLine}`;
-    document.getElementById("location-name").textContent = locationName; 
+    document.getElementById("location-name").textContent = location; 
   
     document.body.style.backgroundImage = `url(../assets/images/${image})`;
   }

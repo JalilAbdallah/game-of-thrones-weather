@@ -3,7 +3,9 @@ function getUserLocation() {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const { latitude, longitude } = position.coords;
-        fetchWeather(`${latitude},${longitude}`);
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+        
+        fetchWeather(`lon=${longitude}&lat=${latitude}`);
       },
       (error) => {
         showModal("Unable to retrieve your location. Please search for a city instead.");
