@@ -1,63 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="A weather forecast app that maps real-world temperatures to regions in the Game of Thrones universe.">
+    <meta
+      name="description"
+      content="A weather forecast app that maps real-world temperatures to regions in the Game of Thrones universe." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game of Thrones</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" href="assets/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="icon" href="assets/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="search-container">
-            <input type="search" class="search-bar" name="search" id="search" placeholder="Search for a City">
-            <i class="ph-bold ph-magnifying-glass"></i>
-            <i class="ph-bold ph-arrow-counter-clockwise reset-button" style="color:red"></i>
-        </div>
+      <div class="search-container">
+        <input
+          type="search"
+          class="search-bar"
+          name="search"
+          id="search"
+          placeholder="Search for a City" />
+        <i class="ph-bold ph-magnifying-glass"></i>
+        <i
+          class="ph-bold ph-arrow-counter-clockwise reset-button"
+          style="color: red"></i>
+      </div>
     </header>
 
     <main class="main">
-        <section class="weather-container">
-            <p id="weather-status">Huh?</p>
-            <p id="location-display" class="location-display">
-                <i class="ph-bold ph-map-pin"></i>
-                <span id="location-name">Unknown</span>
-            </p>
-        </section>
+      <section class="weather-container">
+        <p id="weather-status">Huh?</p>
+        <p id="location-display" class="location-display">
+          <i class="ph-bold ph-map-pin"></i>
+          <span id="location-name">Unknown</span>
+        </p>
+      </section>
 
-        <section class="main-container">
-            <p>It's like ...</p>
-            <p id="final-result"><strong>NOTHING</strong></p>
-            <p>Out There</p>
-        </section>
+      <section class="main-container">
+        <p>It's like ...</p>
+        <p id="final-result"><strong>NOTHING</strong></p>
+        <p>Out There</p>
+      </section>
 
-        <section class="qoute-container">
-            <p id="quote">Loading Up ...</p>
-            <p id="said-by"></p>
-        </section>
+      <section class="qoute-container">
+        <p id="quote">Loading Up ...</p>
+        <p id="said-by"></p>
+      </section>
     </main>
 
     <dialog id="error-dialog">
-        <form method="dialog">
-            <h2 id="dialog-title" class="dialog-title">Error</h2>
-            <p id="dialog-message" class="dialog-message"></p>
-            <button id="dialog-close" class="dialog-close" type="submit">Close</button>
-        </form>
+      <form method="dialog">
+        <h2 id="dialog-title" class="dialog-title">Error</h2>
+        <p id="dialog-message" class="dialog-message"></p>
+        <button id="dialog-close" class="dialog-close" type="submit">
+          Close
+        </button>
+      </form>
     </dialog>
 
-    <script src="./js/weatherMapping.js" defer></script>
-    <script src="./js/utils.js" defer></script>
-    <script src="./js/ui.js" defer></script>
-    <script src="./js/api.js" defer></script>
-    <script src="./js/location.js" defer></script>
-    <script src="./js/eventListeners.js" defer></script>
-    <script src="./js/modal.js" defer></script>
-    <script src="./js/script.js" defer></script>
+    <script src="./src/js/weatherMapping.js" defer></script>
+    <script src="./src/js/utils.js" defer></script>
+    <script src="./src/js/ui.js" defer></script>
+    <script src="./src/js/api.js" defer></script>
+    <script src="./src/js/location.js" defer></script>
+    <script src="./src/js/eventListeners.js" defer></script>
+    <script src="./src/js/modal.js" defer></script>
+    <script src="./src/js/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
-</body>
-
+  </body>
 </html>
