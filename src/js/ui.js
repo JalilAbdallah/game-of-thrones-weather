@@ -23,5 +23,5 @@ function updateUI(data) {
   document.getElementById("quote").innerHTML = `${firstLine}<br>${secondLine}`;
   document.getElementById("location-name").textContent = location;
 
-  document.body.style.backgroundImage = `url(../assets/images/${image})`;
+  document.body.style.backgroundImage = `url(./src/assets/images/${image})`;
 }
